@@ -28,6 +28,8 @@ public class AuthenticationService {
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
 
+    private static final String tokenPrefix = "Bearer ";
+
     public AuthenticationResponse register(RegisterRequest request) {
         var user = User.builder()
                 .firstname(request.getFirstname())
@@ -95,10 +97,10 @@ public class AuthenticationService {
         final String authHeader = request.getHeader(HttpHeaders.AUTHORIZATION);
         final String refreshToken;
         final String username;
-        if (authHeader == null ||!authHeader.startsWith("Bearer ")) {
+        if (authHeader == null ||!authHeader.startsWith(tokenPrefix)) {
             return;
         }
-        refreshToken = authHeader.substring(7);
+        refreshToken = authHeader.substring(tokenPrefix.length());
         username = jwtService.extractUsername(refreshToken);
         if (username != null) {
             var user = this.repository.findUserByUsername(username)
