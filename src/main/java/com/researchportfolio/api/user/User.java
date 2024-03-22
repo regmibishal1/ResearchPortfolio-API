@@ -29,6 +29,7 @@ public class User implements UserDetails {
     private String username;
     private String password;
     @Enumerated(EnumType.STRING)
+    @Builder.Default
     private Role role = Role.USER;
 
 

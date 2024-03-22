@@ -1,4 +1,4 @@
-package com.researchportfolio.api.config;
+package com.researchportfolio.api.auth;
 
 import com.researchportfolio.api.token.TokenRepository;
 import jakarta.servlet.http.HttpServletRequest;
