@@ -31,6 +31,16 @@ public class AuthenticationService {
     private static final String tokenPrefix = "Bearer ";
 
     public AuthenticationResponse register(RegisterRequest request) {
+
+        //make sure request is not empty
+        if (request.getFirstname() == null || request.getFirstname().isEmpty() ||
+                request.getLastname() == null || request.getLastname().isEmpty() ||
+                request.getEmail() == null || request.getEmail().isEmpty() ||
+                request.getUsername() == null || request.getUsername().isEmpty() ||
+                request.getPassword() == null || request.getPassword().isEmpty()) {
+            throw new IllegalArgumentException("Request is empty");
+        }
+
         var user = User.builder()
                 .firstname(request.getFirstname())
                 .lastname(request.getLastname())
@@ -50,6 +60,13 @@ public class AuthenticationService {
     }
 
     public AuthenticationResponse authenticate(AuthenticationRequest request) {
+
+        //make sure request is not empty
+        if (request.getUsername() == null || request.getUsername().isEmpty() ||
+                request.getPassword() == null || request.getPassword().isEmpty()) {
+            throw new IllegalArgumentException("Request is empty");
+        }
+
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
                         request.getUsername(),

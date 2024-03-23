@@ -1,5 +1,6 @@
 package com.researchportfolio.api.auth;
 
+import com.researchportfolio.api.model.APIErrorResponse;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
@@ -19,16 +20,26 @@ public class AuthenticationController {
     private final AuthenticationService service;
 
     @PostMapping("/register")
-    public ResponseEntity<AuthenticationResponse> register(
+    public ResponseEntity<Object> register(
             @RequestBody RegisterRequest request
     ) {
-        return ResponseEntity.ok(service.register(request));
+        try {
+            return ResponseEntity.ok(service.register(request));
+        } catch (IllegalArgumentException e) {
+            APIErrorResponse errorResponse = new APIErrorResponse(e.getMessage());
+            return ResponseEntity.badRequest().body(errorResponse);
+        }
     }
     @PostMapping("/authenticate")
-    public ResponseEntity<AuthenticationResponse> authenticate(
+    public ResponseEntity<Object> authenticate(
             @RequestBody AuthenticationRequest request
     ) {
-        return ResponseEntity.ok(service.authenticate(request));
+        try {
+            return ResponseEntity.ok(service.authenticate(request));
+        } catch (IllegalArgumentException e) {
+            APIErrorResponse errorResponse = new APIErrorResponse(e.getMessage());
+            return ResponseEntity.badRequest().body(errorResponse);
+        }
     }
 
     @PostMapping("/refresh-token")
