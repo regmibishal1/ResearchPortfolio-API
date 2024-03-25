@@ -1,6 +1,7 @@
 package com.researchportfolio.api.config;
 
-import com.researchportfolio.api.token.TokenRepository;
+import com.researchportfolio.api.service.JwtService;
+import com.researchportfolio.api.repository.TokenRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

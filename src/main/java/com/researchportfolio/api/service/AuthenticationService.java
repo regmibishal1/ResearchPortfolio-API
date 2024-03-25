@@ -1,13 +1,15 @@
-package com.researchportfolio.api.auth;
+package com.researchportfolio.api.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.researchportfolio.api.config.JwtService;
-import com.researchportfolio.api.token.Token;
-import com.researchportfolio.api.token.TokenRepository;
-import com.researchportfolio.api.token.TokenType;
-import com.researchportfolio.api.user.Role;
-import com.researchportfolio.api.user.User;
-import com.researchportfolio.api.user.UserRepository;
+import com.researchportfolio.api.model.AuthenticationRequest;
+import com.researchportfolio.api.model.AuthenticationResponse;
+import com.researchportfolio.api.model.RegisterRequest;
+import com.researchportfolio.api.model.Token;
+import com.researchportfolio.api.repository.TokenRepository;
+import com.researchportfolio.api.model.TokenType;
+import com.researchportfolio.api.model.Role;
+import com.researchportfolio.api.model.User;
+import com.researchportfolio.api.repository.UserRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;

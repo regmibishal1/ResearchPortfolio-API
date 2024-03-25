@@ -1,4 +1,4 @@
-package com.researchportfolio.api.auth;
+package com.researchportfolio.api.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

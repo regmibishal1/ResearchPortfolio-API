@@ -1,6 +1,5 @@
-package com.researchportfolio.api.token;
+package com.researchportfolio.api.model;
 
-import com.researchportfolio.api.user.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

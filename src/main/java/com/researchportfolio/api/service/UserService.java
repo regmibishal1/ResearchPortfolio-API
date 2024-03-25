@@ -1,6 +1,8 @@
-package com.researchportfolio.api.user;
+package com.researchportfolio.api.service;
 
-import com.researchportfolio.api.auth.ChangePasswordRequest;
+import com.researchportfolio.api.model.ChangePasswordRequest;
+import com.researchportfolio.api.model.User;
+import com.researchportfolio.api.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;

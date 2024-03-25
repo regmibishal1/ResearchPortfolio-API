@@ -1,4 +1,4 @@
-package com.researchportfolio.api.user;
+package com.researchportfolio.api.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

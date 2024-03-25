@@ -1,5 +1,6 @@
-package com.researchportfolio.api.user;
+package com.researchportfolio.api.repository;
 
+import com.researchportfolio.api.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

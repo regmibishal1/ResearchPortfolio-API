@@ -1,6 +1,5 @@
-package com.researchportfolio.api.auth;
+package com.researchportfolio.api.model;
 
-import com.researchportfolio.api.user.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

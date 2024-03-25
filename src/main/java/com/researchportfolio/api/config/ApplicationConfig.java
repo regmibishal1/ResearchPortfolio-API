@@ -1,6 +1,6 @@
 package com.researchportfolio.api.config;
 
-import com.researchportfolio.api.user.UserRepository;
+import com.researchportfolio.api.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

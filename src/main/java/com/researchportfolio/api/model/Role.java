@@ -1,4 +1,4 @@
-package com.researchportfolio.api.user;
+package com.researchportfolio.api.model;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import static com.researchportfolio.api.user.Permission.*;
+import static com.researchportfolio.api.model.Permission.*;
 
 
 @RequiredArgsConstructor

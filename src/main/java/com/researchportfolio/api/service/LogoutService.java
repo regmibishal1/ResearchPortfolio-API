@@ -1,6 +1,6 @@
-package com.researchportfolio.api.config;
+package com.researchportfolio.api.service;
 
-import com.researchportfolio.api.token.TokenRepository;
+import com.researchportfolio.api.repository.TokenRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;

@@ -1,4 +1,4 @@
-package com.researchportfolio.api.config;
+package com.researchportfolio.api.service;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

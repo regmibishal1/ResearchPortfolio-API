@@ -1,7 +1,8 @@
-package com.researchportfolio.api.user;
+package com.researchportfolio.api.controller;
 
-import com.researchportfolio.api.auth.ChangePasswordRequest;
-import com.researchportfolio.api.token.TokenType;
+import com.researchportfolio.api.model.ChangePasswordRequest;
+import com.researchportfolio.api.model.User;
+import com.researchportfolio.api.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;

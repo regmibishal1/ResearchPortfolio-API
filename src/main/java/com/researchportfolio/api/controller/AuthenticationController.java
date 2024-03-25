@@ -1,6 +1,9 @@
-package com.researchportfolio.api.auth;
+package com.researchportfolio.api.controller;
 
 import com.researchportfolio.api.model.APIErrorResponse;
+import com.researchportfolio.api.model.AuthenticationRequest;
+import com.researchportfolio.api.model.RegisterRequest;
+import com.researchportfolio.api.service.AuthenticationService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
