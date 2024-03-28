@@ -12,7 +12,8 @@ public class WebConfig implements WebMvcConfigurer {
 
     // Define a list of allowed origins
     private static final List<String> ALLOWED_ORIGINS = List.of(
-            "http://localhost:4200/"
+            "http://localhost:4200/",
+            "https://regmibishal1.github.io/"
     );
 
     @Override
